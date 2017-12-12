@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/lightbox.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<style>
+body {font-family: "Helvetica", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="portfolio.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PORTFOLIO</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <div class="container ground">
+    <div class="row">
+      <div class="col-sm">
+        <a href="images/type_car.jpg" data-lightbox="gallery" data-title="type_car"><img src="images/type_car.jpg"
+        width="40%" height="auto"/></a>
+      </div>
+      <div class="col-sm">
+        <a href="images/Infographic.jpg" data-lightbox="gallery" data-title="Infographic"><img src="images/Infographic.jpg"
+        width="40%" height="auto"/></a>
+      </div>
+      <div class="col-sm">
+        <a href="images/Scorpion shades.jpg" data-lightbox="gallery" data-title="Scorpion shades"><img src="images/Scorpion shades.jpg"
+        width="40%" height="auto"/></a>
+      </div>
+      <div class="col-sm">
+        <a href="images/Scorpion tints.jpg" data-lightbox="gallery" data-title="Scorpion tints"><img src="images/Scorpion tints.jpg"
+        width="40%" height="auto"/></a>
+      </div>
+      <div class="col-sm">
+        <a href="images/Scorpion analogous.jpg" data-lightbox="gallery" data-title="Scorpion analogous"><img src="images/Scorpion analogous.jpg"
+        width="40%" height="auto"/></a>
+      </div>
+      <div class="col-sm">
+        <a href="images/Scorpion.jpg" data-lightbox="gallery" data-title="Scorpion"><img src="images/Scorpion.jpg"
+        width="40%" height="auto"/></a>
+      </div>
+      <div class="col-sm">
+        <a href="images/Business_Card.jpg" data-lightbox="gallery" data-title="Business_Card"><img src="images/Business_Card.jpg"
+        width="40%" height="auto"/></a>
+      </div>
+    </div>
+  </div>
+
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+
+<script>
+// Automatic Slideshow - change image every 6 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 6000);
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+    integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+    integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+    crossorigin="anonymous"></script>
+    <script src="js/lightbox.js"></script>
+  </body>
+</html>
