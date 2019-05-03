@@ -20,6 +20,10 @@
   text-shadow: 1px 1px 3px #666666;
 }
 
+.coursework {
+  color: cyan;
+}
+
 .ground {
   color: cyan;
   background-color: blue;
